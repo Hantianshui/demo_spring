@@ -8,4 +8,8 @@ import com.example.demospring.dto.StudentDTO;
  */
 public interface StudentService {
     StudentDTO getStudentDTOById(long id);
+
+    StudentDTO getStudentDTOByName(String name);
+
+    String addStudent(StudentDTO studentDTO);
 }

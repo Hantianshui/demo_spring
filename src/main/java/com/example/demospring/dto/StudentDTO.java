@@ -18,4 +18,6 @@ public class StudentDTO {
 
     private String email;
 
+    private int age;
+
 }

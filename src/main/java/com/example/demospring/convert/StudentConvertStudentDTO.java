@@ -9,10 +9,15 @@ import com.example.demospring.dto.StudentDTO;
  */
 public class StudentConvertStudentDTO {
     public static StudentDTO studentToStudentDTO(Student student) {
+
         StudentDTO studentDTO = new StudentDTO();
+
         studentDTO.setId(student.getId());
+
         studentDTO.setName(student.getName());
+
         studentDTO.setEmail(student.getEmail());
+
         return studentDTO;
     }
 }
