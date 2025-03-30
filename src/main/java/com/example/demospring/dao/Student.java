@@ -1,8 +1,8 @@
 package com.example.demospring.dao;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -12,8 +12,8 @@ import static jakarta.persistence.GenerationType.IDENTITY;
  */
 @Entity
 @Table(name = "user")
-@Setter
-@Getter
+@Data
+@DynamicInsert
 public class Student {
     @Id
     @GeneratedValue(strategy = IDENTITY)

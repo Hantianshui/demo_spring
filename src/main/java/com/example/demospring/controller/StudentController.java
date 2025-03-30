@@ -29,4 +29,18 @@ public class StudentController {
     public String addStudent(@RequestBody StudentDTO studentDTO) {
         return studentService.addStudent(studentDTO);
     }
+
+    @DeleteMapping("/student/delete/{id}")
+    public String deleteStudent(@PathVariable long id) {
+        return studentService.deleteStudent(id);
+    }
+
+    @PutMapping("/student/update/{id}")
+    public String updateStudent(@PathVariable long id, @RequestParam(required = false) String name,
+                                @RequestParam(required = false) String email) {
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(email);
+        return studentService.updateStudent(id, name, email);
+    }
 }

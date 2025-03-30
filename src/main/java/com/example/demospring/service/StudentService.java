@@ -12,4 +12,8 @@ public interface StudentService {
     StudentDTO getStudentDTOByName(String name);
 
     String addStudent(StudentDTO studentDTO);
+
+    String deleteStudent(long id);
+
+    String updateStudent(long id, String name, String email);
 }
